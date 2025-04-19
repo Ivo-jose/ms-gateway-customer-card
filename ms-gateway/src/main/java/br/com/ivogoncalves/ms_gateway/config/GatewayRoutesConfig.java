@@ -12,8 +12,8 @@ public class GatewayRoutesConfig {
 	@Bean
 	RouteLocator routes(RouteLocatorBuilder builder) {
 		return builder.routes()
-				.route("ms-customer", r -> r.path("/api/customers/**")
-						.uri("lb://ms-customer"))
+				.route("ms-customer", r -> r.path("/api/customers/**").uri("lb://ms-customer"))
+				.route("ms-cards", r -> r.path("/api/cards/**").uri("lb://ms-cards"))
 				.build();
 		
 	}

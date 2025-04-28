@@ -13,6 +13,7 @@ public class GatewayRoutesConfig {
 		return builder.routes()
 				.route("ms-customer", r -> r.path("/api/customers/**").uri("lb://ms-customer"))
 				.route("ms-cards", r -> r.path("/api/cards/**").uri("lb://ms-cards"))
+				.route("ms-credit-appraiser", r -> r.path("/api/credit-appraiser/**").uri("lb://ms-credit-appraiser"))
 				.build();		
 	}
 }
